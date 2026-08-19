@@ -6,8 +6,8 @@ from google import genai
 router = APIRouter(prefix="/agency", tags=["AI Agency"])
 
 class AgencyRequest(BaseModel):
-    task_type: str = "onboarding"  # onboarding أو lead_gen
-    input_value: str             # اسم العميل أو النشاط التجاري
+    task_type: str = "onboarding"
+    input_value: str
 
 @router.post("/run-agent")
 async def run_agent(request: AgencyRequest):
@@ -18,7 +18,6 @@ async def run_agent(request: AgencyRequest):
     try:
         client = genai.Client(api_key=api_key)
         
-        # بناء الـ prompt بناءً على نوع المهمة
         if request.task_type.lower() == "onboarding":
             prompt_text = f"Create a comprehensive professional onboarding plan for the company/client: {request.input_value}"
         elif request.task_type.lower() == "lead_gen":
