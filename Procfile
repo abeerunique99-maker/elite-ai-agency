@@ -1,1 +1,1 @@
-﻿web: poetry run uvicorn elite_ai_agency.main:app --host 0.0.0.0 --port $PORT
+﻿web: python main.py
