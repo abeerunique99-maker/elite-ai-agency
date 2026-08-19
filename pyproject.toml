@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "elite-ai-agency"
+version = "0.1.0"
+description = "Elite AI Automation Agency Framework"
+authors = ["Abieroz"]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0.0"
+fastapi = "^0.110.0"
+uvicorn = "^0.28.0"
+pydantic = "^2.6.0"
+pydantic-settings = "^2.2.0"
+tenacity = "^8.2.3"
+langgraph = "^0.2.10"
+langchain = "^0.3.14"
+langchain-core = "^0.3.0"
+google-genai = "^2.16.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

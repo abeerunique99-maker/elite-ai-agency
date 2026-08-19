@@ -1,0 +1,26 @@
+{
+    "python_version": {
+        "required": "3.11",
+        "current": "3.11.9",
+        "status": "PASS"
+    },
+    "packages": {
+        "langgraph": {
+            "status": "PASS"
+        },
+        "langchain": {
+            "status": "PASS"
+        },
+        "pydantic": {
+            "status": "PASS"
+        }
+    },
+    "environment_variables": {
+        "GEMINI_API_KEY": {
+            "status": "PASS"
+        },
+        "OPENAI_API_KEY": {
+            "status": "FAIL"
+        }
+    }
+}
